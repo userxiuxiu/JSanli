@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*偶数*/
+			/*li:nth-child(2n){
+				background-color: yellow;
+			}
+			
+			li:nth-child(2n+1){
+				background-color: red;
+			}
+			li:hover{
+				background-color: purple;
+			}*/
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<script>
+			window.onload=function  () {
+				//获取元素
+				var lis=document.getElementsByTagName("li");
+				//遍历
+				for (var i=0;i<lis.length;i++) {
+					//判断单双行
+					if (i%2==0) {
+						lis[i].style.backgroundColor="red";
+					} else{
+						lis[i].style.backgroundColor="yellow";
+					}
+					(function  (i) {
+						//设置鼠标附上样式
+						lis[i].onmouseover=function  () {
+							lis[i].style.backgroundColor="purple";
+						}
+						//去除样式
+						lis[i].onmouseout=function  () {
+							if (i%2==0) {
+						lis[i].style.backgroundColor="red";
+					} else{
+						lis[i].style.backgroundColor="yellow";
+					}
+						}
+					})(i)
+				}
+			}
+			
+		</script>
+	</body>
+</html>

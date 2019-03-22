@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			label{
+				/*垂直对齐*/
+				vertical-align: top;
+			}
+			textarea{
+				width: 100px;
+				height: 40px;
+			}
+			button{
+				vertical-align: top;
+			}
+			div{
+				width: 400px;
+				height: 400px;
+				background-color: #CCCCCC;
+				border: 2px solid #A52A2A;
+				/*超出div盒子产生滚动条*/
+				overflow: auto;
+				/*overflow: hidden;隐藏*/
+			}
+		</style>
+	</head>
+	<body>
+		<label>张三:</label>
+		<textarea name="message"></textarea>
+		<button>提交</button>
+		<div>
+			
+		</div>
+		<script>
+			var btn=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			btn.onclick=function  () {
+				//获取值
+				var val=document.getElementsByTagName("textarea")[0].value;
+				//追加
+				div.innerHTML+="张三："+val+"<br/>";
+				//清空
+				document.getElementsByTagName("textarea")[0].value="";
+			}
+		</script>
+	</body>
+</html>

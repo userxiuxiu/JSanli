@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				position: fixed;
+				top: 50px;
+			}
+			img:nth-child(1){
+				left: 0;
+			}
+			img:nth-child(2){
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/1.gif" />
+		<img src="img/2.gif" />
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<div>天王盖地虎</div>
+		<script>
+			window.onload=function  () {
+				//获取元素
+				var img=document.getElementsByTagName("img");
+				//倒计时setTime（样式,时间）;
+				setTimeout(function  () {
+					img[0].style.display="none";
+					img[1].style.display="none";
+				},5000);
+			}
+		</script>
+		
+	</body>
+</html>
